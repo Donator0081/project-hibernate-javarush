@@ -13,22 +13,22 @@ public class Player {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(length = 12)
+    @Column(length = 12, nullable = false)
     private String name;
 
-    @Column(length = 30)
+    @Column(length = 30, nullable = false)
     private String title;
-    @Column
+
     @Enumerated(EnumType.ORDINAL)
     private Race race;
-    @Column
+
     @Enumerated(EnumType.ORDINAL)
     private Profession profession;
-    @Column
+    @Column(nullable = false)
     private Date birthday;
-    @Column
+    @Column(nullable = false)
     private Boolean banned;
-    @Column
+    @Column(nullable = false)
     private Integer level;
 
     public Player() {
